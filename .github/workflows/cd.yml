@@ -6,7 +6,7 @@ on:
 
 jobs:
   gh-release:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     permissions:
       actions: none
       checks: none
@@ -22,13 +22,12 @@ jobs:
       - name: "Checkout repository"
         uses: actions/checkout@v2
 
-      - name: "Set up Node.js 12.X"
+      - name: "Set up Node.js"
         uses: actions/setup-node@v2.2.0
         with:
-          node-version: '12.0'
+          node-version: 12.0
       
       - name: "Install all dependencies"
-        working-directory: .docs/
         run: npm ci
 
       - name: "Run build"

@@ -1,4 +1,4 @@
-name: documentation
+name: CI
 
 on:
   pull_request:
@@ -7,18 +7,29 @@ on:
 jobs:
   checks:
     runs-on: ubuntu-latest
+    working-directory: docs
+    permissions:
+      actions: none
+      checks: none
+      contents: read
+      deployments: none
+      issues: none
+      packages: none
+      pull-requests: none
+      repository-projects: none
+      security-events: none
+      statuses: none
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - name: "Checkout repository"
+        uses: actions/checkout@v2
+
+      - name: "Set up Node.js 12.X"
+        uses: actions/setup-node@v2.2.0
         with:
           node-version: '12.x'
-      - name: Test Build
-        run: |
-          if [ -e yarn.lock ]; then
-          yarn install --frozen-lockfile
-          elif [ -e package-lock.json ]; then
-          npm ci
-          else
-          npm i
-          fi
-          npm run build
+      
+      - name: "Install all dependencies"
+        run: npm ci
+
+      - name: "Run build"
+        run: npm run build

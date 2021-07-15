@@ -7,7 +7,7 @@ module.exports = {
   tagline: 'Documentation of my projects',
   url: 'https://docs.tjarbo.me',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/book-2px.svg',
   organizationName: 'tjarbo',

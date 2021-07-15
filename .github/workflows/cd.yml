@@ -7,7 +7,9 @@ on:
 jobs:
   gh-release:
     runs-on: ubuntu-latest
-    working-directory: docs
+    defaults:
+      run:
+        working-directory: .docs/
     permissions:
       actions: none
       checks: none

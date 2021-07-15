@@ -3,13 +3,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'tjarbo\'s Documentation',
-  tagline: 'Documentation of tjarbo\'s projects',
+  title: 'tjarbo\'s documentation',
+  tagline: 'Documentation of my projects',
   url: 'https://docs.tjarbo.me',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/book-2px.svg',
   organizationName: 'tjarbo',
   projectName: 'documentation',
   themes: ['@docusaurus/theme-classic'],
@@ -40,48 +40,8 @@ module.exports = {
     },
     footer: {
       style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      links: [],
+      copyright: `Copyright © ${new Date().getFullYear()} A tjarbo project. Built with Docusaurus. Icon from feathericons.com`,
     },
     prism: {
       theme: lightCodeTheme,
@@ -96,7 +56,7 @@ module.exports = {
         routeBasePath: 'moodle-notification-service',
         path: 'moodlebot',
         sidebarPath: require.resolve('./moodlebot_versioned_sidebars.js'),
-        editUrl: 'https://example.com',
+        editUrl: 'https://github.com/tjarbo/documentation/tree/master/docs/moodlebot',
         disableVersioning: true,
       },
     ],

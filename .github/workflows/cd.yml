@@ -10,17 +10,17 @@ jobs:
     defaults:
       run:
         working-directory: .docs/
-    permissions:
-      actions: none
-      checks: none
-      contents: write
-      deployments: none
-      issues: none
-      packages: none
-      pull-requests: none
-      repository-projects: none
-      security-events: none
-      statuses: none
+    # permissions:
+    #   actions: none
+    #   checks: none
+    #   contents: write
+    #   deployments: none
+    #   issues: none
+    #   packages: none
+    #   pull-requests: none
+    #   repository-projects: none
+    #   security-events: none
+    #   statuses: none
     steps:
       - name: "Checkout repository"
         uses: actions/checkout@v2

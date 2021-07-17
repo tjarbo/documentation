@@ -22,7 +22,7 @@ module.exports = {
       },
       items: [
         {
-          to: 'moodle-notification-service/README',
+          to: 'moodle-notification-service/home',
           position: 'left',
           label: 'Moodle Notification Service',
         },

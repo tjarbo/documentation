@@ -15,7 +15,7 @@ module.exports = {
   themes: ['@docusaurus/theme-classic'],
   themeConfig: {
     navbar: {
-      title: 'tjarbo\'s docs',
+      title: 'tjarbo\'s doc',
       logo: {
         alt: 'Feather Icon Book',
         src: 'img/book-2px.svg',

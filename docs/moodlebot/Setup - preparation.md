@@ -28,7 +28,10 @@ For this step, you need an existing Moodle account (that can be yours). This acc
 
 We created an online tool, to make it as simple as possible for you: Open [fmdb.tjarbo.me](http://fmdb.tjarbo.me) and fill out the form to generate all required environment variables. Note, that no data will be stored or send to any other server than the submitted moodle server! Your credentials will be send to the official API of your moodle instance to receive a new token. You need the displayed results for the next step.  
 
-> Right now, SSO is not official supported ☹️ We need to figure out how to implement this authentication method. Lernraum Berlin ? -> Click [here](https://github.com/tjarbo/discord-moodle-bot/issues/83#issuecomment-757985921)
+:::info
+Right now, SSO is not official supported ☹️ We need to figure out how to implement this authentication method. Lernraum Berlin ? -> Click [here](https://github.com/tjarbo/discord-moodle-bot/issues/83#issuecomment-757985921)
+:::
+
 ### ㊙️ Setup your environment variables
 
 This file contains the initial and background configuration of your FMDB. Create a new file `.env` on your system and copy and paste the template from [this page](whats-inside-env). There you can also find a description about each variable. Make sure that:

@@ -11,6 +11,7 @@ slug: /setup-prepare
 ---
 
 ## 🍳 General preparation
+
 Before you can start your own bot, you need to set up your own Discord-Bot and to generate your Moodle credentials. The following steps will guide you through this process. Then you will create the `.env` file.
 
 ### 🤖 Create a new Discord-Bot
@@ -18,9 +19,9 @@ Before you can start your own bot, you need to set up your own Discord-Bot and t
 Because there is already a good instruction out there about how to set up a new discord bot, please follow all the steps described in [this](https://discordpy.readthedocs.io/en/latest/discord.html) article.
 
 The important points are:
+
 - Save the token from step 7 (section 1). You will need it later for the environment variables (`DISCORD_TOKEN=`)
 - Give the bot all *Text Permissions*
-
 
 ### 🏫 Generate your new Moodle-Token
 
@@ -34,7 +35,7 @@ Right now, SSO is not official supported ☹️ We need to figure out how to imp
 
 ### ㊙️ Setup your environment variables
 
-This file contains the initial and background configuration of your FMDB. Create a new file `.env` on your system and copy and paste the template from [this page](whats-inside-env). There you can also find a description about each variable. Make sure that:
+This file contains the initial and background configuration of your FMDB. Create a new file `.env` on your system and copy and paste the template from [this page](what-is-inside-env.md). There you can also find a description about each variable. Make sure that:
 
 - You have entered the Discord token you saved from the first step.
 - You have entered the Moodle values from the last step.
@@ -44,5 +45,6 @@ This file contains the initial and background configuration of your FMDB. Create
 ### ⏭️ What next ?
 
 Now you are ready to setup your own fmdb! You can choose between
-* [Docker (recommended)](setup-with-docker) 🐳
-* [Heroku & MongoDB Atlas (cloud)](setup-with-heroku-mongodb-atlas)
+
+- [Docker (recommended)](setup-with-docker.md) 🐳
+- [Heroku & MongoDB Atlas (cloud)](setup-with-heroku-and-mongodb-atlas.md)

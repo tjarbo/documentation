@@ -14,32 +14,35 @@ slug: /setup-with-heroku-mongodb-atlas
 
 This article helps you to run your own fmdb on Heroku and MongoDB Atlas. Both products are useful as they are part of [GitHub's education pack.](https://education.github.com/pack/) 🎉 So if you are a student or a pupil make sure, you checked it out! Because then you can run one **Hobby Dyno** for free, what **is necessary for this use case.**
 
-Before you start, follow the steps described [here](https://github.com/tjarbo/discord-moodle-bot/wiki/Setup-your-own-bot).
+Before you start, follow the steps described [here](setup-preparation.md).
 
 ### Preparation
 
 You need
+
 1. an account on [Heroku](https://www.heroku.com)
 2. an account on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
-3. a `.env` file from [these steps](setup-prepare).
+3. a `.env` file from [these steps](setup-preparation.md).
 
 ### 1. Setup you MongoDB
 
 As this is a bit more complex, please follow the steps (parts) 1 to 4 of the official ["Get Started with Atlas"](https://docs.atlas.mongodb.com/getting-started) article. After you completed 1 to 4, came back here and continue your setup.
 
 Please note for the single steps:
-* *Part 1:* 
-    * Choose 'MongoDB Atlas'
+
+* *Part 1:*
+  * Choose 'MongoDB Atlas'
 * *Part 2:* nothing :)
-* *Part 3:* 
-    * Click on `Allow access from everywhere`
+* *Part 3:*
+  * Click on `Allow access from everywhere`
+
 :::caution
  **Warning from [MongoDB Developer](https://developer.mongodb.com/how-to/use-atlas-on-heroku)**:  you probably don't want to allow this type of access in a production environment. Instead, you'll want to identify the exact IP addresses you know your application will be hosted on and explicitly set which IP addresses, or IP ranges, should have access to your cluster. After setting up your Heroku app, follow the steps in the "Configuring Heroku IP Addresses in Atlas" section below to see *how to add the proper IP addresses for your Heroku app.*
 :::
 
 * *Part 4:*
-    * Choose a username as you like :) 
-    * **Choose a strong password!** and keep it, you will need it during the next steps
+  * Choose a username as you like :)
+  * **Choose a strong password!** and keep it, you will need it during the next steps
 
 ### 2. Get connection string from Atlas
 
@@ -52,7 +55,7 @@ Now it's time to get the connection string you will need for the .env-variable "
 5. Replace `<dbname>` with `fmdb`.
 6. Replace `<password>` with the password from cluster setup :) (Not the password of your MongoDB Atlas account!)
 7. Save the link. You will need it during the next steps.
- 
+
 :::note
 **Note from [docs.atlas.mongodb.com](https://docs.atlas.mongodb.com/tutorial/connect-to-your-cluster):** The connection string displayed in the console uses a placeholder value for the password. Replace that placeholder with the password specified when you created your database user.
 
@@ -62,8 +65,9 @@ If the password contains reserved URI characters, you must escape the characters
 ### 3. Update your environment variables
 
 Open your `.env` file, set `MONGO_HOST=` to the string you got from [step 1](#1-setup-you-mongodb) and append `&ssl=true` at the end.
- 
+
 **Example**:
+
 ```shell
 ...
 MONGO_HOST=mongodb+srv://mydatabaseuser:SuperS3cur3P4ssw0rd@fmdbcluster.hmxhr.mongodb.net/fmdb?retryWrites=true&w=majority&ssl=true

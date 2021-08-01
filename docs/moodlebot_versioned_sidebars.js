@@ -11,16 +11,16 @@
 
 module.exports = {
   tutorialSidebar: [
-    "Home",
+    "home",
     {
       type: 'category',
       label: 'Setup your bot',
       items: [
-        'Setup - preparation',
-        'Setup - with docker',
-        'Setup - with heroku and mongodb atlas',
+        'setup-preparation',
+        'setup-with-docker',
+        'setup-with-heroku-and-mongodb-atlas',
       ],
     },
-    "What is inside env",
+    "what-is-inside-env",
   ],
 };

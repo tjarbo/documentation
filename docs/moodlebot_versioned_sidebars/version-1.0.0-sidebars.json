@@ -1,0 +1,31 @@
+{
+  "version-1.0.0/tutorialSidebar": [
+    {
+      "type": "doc",
+      "id": "version-1.0.0/home"
+    },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "Setup your bot",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-1.0.0/setup-preparation"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.0/setup-with-docker"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.0/setup-with-heroku-and-mongodb-atlas"
+        }
+      ]
+    },
+    {
+      "type": "doc",
+      "id": "version-1.0.0/what-is-inside-env"
+    }
+  ]
+}

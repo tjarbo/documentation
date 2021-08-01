@@ -22,9 +22,15 @@ module.exports = {
       },
       items: [
         {
-          to: 'moodle-notification-service/home',
-          position: 'left',
+          type: 'doc',
           label: 'Moodle Notification Service',
+          docId: 'home',
+          docsPluginId: 'moodlebot',
+        },
+        {
+          type: 'docsVersionDropdown',
+          position: 'right',
+          docsPluginId: 'moodlebot',
         },
         {
           href: 'https://twitter.com/tjarbo_dev',
@@ -57,9 +63,20 @@ module.exports = {
         path: 'moodlebot',
         sidebarPath: require.resolve('./moodlebot_versioned_sidebars.js'),
         editUrl: 'https://github.com/tjarbo/documentation/tree/master/docs/moodlebot',
-        disableVersioning: true,
-      },
-    ],
+        disableVersioning: false,
+        lastVersion: "1.0.0",
+        versions: {
+            "current": {
+              "label": "Next",
+              "path": "2.0.0"
+            },
+            "1.0.0": {
+              "label": "1.0.0",
+              "path": "1.0.0"
+            }
+          },
+        },
+      ],
     [ 
       '@docusaurus/plugin-content-pages',
       {

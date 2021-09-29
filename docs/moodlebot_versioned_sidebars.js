@@ -16,7 +16,8 @@ module.exports = {
       type: 'category',
       label: 'Getting started',
       items: [
-        'getting-started/',
+        'getting-started/preparation',
+        'getting-started/deploy-to-heroku',
       ],
     },
     {
@@ -31,15 +32,15 @@ module.exports = {
       items: [
         'advanced-guides/configure-via-env',
         'advanced-guides/what-is-inside-env',
+        'advanced-guides/use-mongodb-atlas',
       ],
     },
     {
       type: 'category',
       label: 'Let\'s contribute',
       items: [
-        'contribution/i-want-to-code',
+        'contribution/code',
         'contribution/translations',
-        'contribution/i-want-to-update-wiki',
       ],
     },
     {

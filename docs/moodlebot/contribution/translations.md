@@ -15,7 +15,7 @@ This article guides you through all tasks related to the language support of the
 
 # Frontend
 
-The content below describes the usage of the [vue-i18n]() plugin at the frontend.
+The content below describes the usage of the [vue-i18n](https://kazupon.github.io/vue-i18n/) plugin at the frontend.
 
 :::note
 All files and commands mentioned below are relative to the `packages/frontend/` folder. All translations are located inside `src/locales/` and use the JSON document structure.

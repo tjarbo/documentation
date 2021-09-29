@@ -4,20 +4,17 @@ hide_title: true
 hide_table_of_contents: false
 description: Description of .env
 keywords:
-  - discord
   - moodle
-  - bot
-slug: /whats-inside-env
+  - notification
+  - server
+  - environment
+  - variables
 ---
 ## 🎭 Templates
 
-### Only requiered variables
+### Only required variables
 
 ```bash
-ADMIN_ID=00000...000
-ADMIN_NAME=username#00000
-DISCORD_CHANNEL=00000...000
-DISCORD_TOKEN=XXXXXX....XXX
 JWT_SECRET=
 MONGO_HOST=mongodb://mongo:27017/fmdb
 MOODLE_BASE_URL=https://moodle.example.com/
@@ -28,8 +25,6 @@ MOODLE_USERID=00000
 ### All available variables
 
 ```bash
-ADMIN_ID=00000...000
-ADMIN_NAME=username#00000
 DISCORD_CHANNEL=00000...000
 DISCORD_TOKEN=XXXXXX....XXX
 JWT_SECRET=

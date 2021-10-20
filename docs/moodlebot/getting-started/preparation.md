@@ -38,12 +38,12 @@ Right now, SSO is not official supported ☹️ We need to figure out how to imp
 This file contains the initial and background configuration of your FMDB. Create a new file `.env` on your system and copy and paste the template from [this page](what-is-inside-env.md). There you can also find a description about each variable. Make sure that:
 
 - You have entered the Moodle values from the last step.
-- You changed `JWT_SECRET` to a very strong value 1!11!!!1 
+- You changed `JWT_SECRET` to a very strong value 1!11!!!1
 
 ### ⏭️ What next ?
 
-Now you are ready to deploy your moodle notification service. We have created multiple instructions for different cloud providers and methods. 
+Now you are ready to deploy your moodle notification service. We have created multiple instructions for different cloud providers and methods.
 
 :::tip
-Many of the chosen providers have a discount for student! 
-::: 
+Many of the chosen providers have a discount for students!
+:::

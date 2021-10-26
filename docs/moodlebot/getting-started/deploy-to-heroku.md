@@ -30,7 +30,7 @@ Make sure that you ...
 
 Click here:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/heroku/node-js-getting-started)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/tjarbo/discord-moodle-bot)
 
 1. Give your application a fancy name and choose your region
 2. Give it a name and fill all _empty_ environment variables with the values of your `.env` file.

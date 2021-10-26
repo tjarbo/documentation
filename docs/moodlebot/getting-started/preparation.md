@@ -13,6 +13,10 @@ keywords:
 
 Before you can start your own notification service, you need to set up your environment variables which store your Moodle credentials. The following steps will guide you through this process. At the end you should have your `.env` file ready!
 
+:::info
+The Moodle Notification Service uses passwordless authentication! Learn more about this [here](../advanced-guides/what-is-passwordless.md)
+:::
+
 ### 📁 Create your file
 
 Create a new file on you local filesystem and name it `.env`. In some cases your file will disappear immediately after you have created it. In this cases change your filemanager's settings to display hidden files.

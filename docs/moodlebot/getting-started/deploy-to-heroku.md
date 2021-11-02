@@ -23,8 +23,9 @@ Student discount is available with the GitHub education pack. Click [here](https
 Make sure that you ...
 
 1. have an account on [Heroku](https://www.heroku.com).
-2. have access to a **Hobby Dyno**, because **it is required for this use case.**
-3. have `.env` file from [these steps](setup-preparation.md).
+2. have access to a **Hobby Dyno**, because **"always-on" is required for this use case.**
+3. have `.env` file from [these steps](setup-preparation.md) and a [database](../advanced-guides/use-mongodb-atlas.md)
+
 
 ### 🧚 Heroku is just a click away
 
@@ -34,13 +35,12 @@ Click here:
 
 1. Give your application a fancy name and choose your region
 2. Give it a name and fill all _empty_ environment variables with the values of your `.env` file.
-3. Click _Deploy App_ and see the magic happen 🔮✨
+3. Make sure that the `MONGO_HOST` value end on &ssl=true 
+4. Click _Deploy App_ and see the magic happen 🔮✨
 
 
 ### ✅ Yeah! 
 
-You have successfully deployed your own fmdb to heroku! Within the *build log* you can find the url to access the admin panel.
+You have successfully deployed your own notification service to Heroku! Within the [logs](https://devcenter.heroku.com/articles/logging#log-retrieval-via-the-web-dashboard) you can find the registration token and url to access the admin panel.
 
-:::note
-When the notification service freshly starts, the discord cache will be empty. Maybe as a spam bot protection, the bot is only able to send messages to users it already knows. Send the bot a small "test" message to add your admin (discord) account to bots cache.  
-:::
+Make sure to convert your maybe free dyno to a hobby dyno with `always-on` enabled.

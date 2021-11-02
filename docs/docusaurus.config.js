@@ -23,7 +23,7 @@ module.exports = {
       items: [
         {
           type: 'doc',
-          label: 'Moodle Notification Service',
+          label: 'Notification Service',
           docId: 'home',
           docsPluginId: 'moodlebot',
         },

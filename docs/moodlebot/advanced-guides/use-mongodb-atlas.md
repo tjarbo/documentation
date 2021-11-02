@@ -43,7 +43,7 @@ Now it's time to get the connection string you will need for the .env-variable `
 2. In *Choose a connection method* view, click **Connect your application**.
 3. Select **Node.js** from the *Driver* dropdown.
 4. Copy the provided connection string from the **Connection String Only** dialog tab.
-5. Replace `<dbname>` with `fmdb`.
+5. Replace `<dbname>` or `myFirstDatabase` with `moodle-notification-service`.
 6. Replace `<password>` with the password from cluster setup :) (Not the password of your MongoDB Atlas account!)
 7. Save the link. You will need it during the next steps.
 
@@ -61,6 +61,6 @@ Open your `.env` file, set `MONGO_HOST=` to the string you got from [🔡 2. Get
 
 ```shell
 ...
-MONGO_HOST=mongodb+srv://mydatabaseuser:SuperS3cur3P4ssw0rd@fmdbcluster.hmxhr.mongodb.net/fmdb?retryWrites=true&w=majority&ssl=true
+MONGO_HOST=mongodb+srv://mydatabaseuser:SuperS3cur3P4ssw0rd@fmdbcluster.hmxhr.mongodb.net/notification-service?retryWrites=true&w=majority&ssl=true
 ...
 ```

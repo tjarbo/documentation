@@ -11,12 +11,18 @@ keywords:
   - notification
 ---
 <div align="center">
-    <a href="#"><img src="https://raw.githubusercontent.com/tjarbo/discord-moodle-bot/master/logo.png" alt="FMDB" width="200"/></a>
+    <img src="https://raw.githubusercontent.com/tjarbo/discord-moodle-bot/version-2/logo.svg" alt="Mailbox Icon by Bootstrap" width="200"></img>
     <br />
-    <h1>Fancy-Moodle-Notification-Service</h1>
+    <h2>Notification Service</h2>
+    <h3>for Moodle™</h3>
 </div>
 
 
-Hey 👋 and welcome to the wiki of the FMNS. Here you can find more information about the project, how to setup your own service or how to contribute. If you have any questions, feel free to ask the community via the [Discussion](https://github.com/tjarbo/discord-moodle-bot/discussions) tab.
+#### Hey 👋
 
-The service supports different conntectors to interact with your favourite 
+Welcome to the wiki of the Notification Service. Here you can find more information about the project, how to setup your own service or how to contribute. If you have any questions, feel free to ask the community via the [Discussion](https://github.com/tjarbo/discord-moodle-bot/discussions) tab.
+
+The service supports different connectors to interact with your favorite messaging service like Discord, Matrix or Slack¹!
+
+---
+¹ Currently only Discord is supported, more are coming soon. If we are to slow for you, make a PR 😉 

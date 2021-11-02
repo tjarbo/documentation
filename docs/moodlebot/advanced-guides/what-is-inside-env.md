@@ -20,11 +20,14 @@ MONGO_HOST=mongodb://mongo:27017/fmdb
 MOODLE_BASE_URL=https://moodle.example.com/
 MOODLE_TOKEN=XXXXXXXXXXXXXXXXX
 MOODLE_USERID=00000
+RP_ID=NotificationService
+RP_ORIGIN=https://notificationservice.tjarbo.me
 ```
 
 ### All available variables
 
 ```bash
+CONNECTOR_LOG_LIFETIME=31d
 DISCORD_CHANNEL=00000...000
 DISCORD_TOKEN=XXXXXX....XXX
 JWT_SECRET=
@@ -39,34 +42,31 @@ MOODLE_USE_COURSE_SHORTNAME=true
 MOODLE_USERID=00000
 NODE_ENV=production
 PORT=4040
+REGISTRATION_TOKEN_LIFETIME=15m
+RP_NAME=Notification Service for Moodle
+RP_ID=
+RP_ORIGIN=
 ```
 
-## 🤓 Description
+## Descriptions
 
-Here you can finde a detailed description of available environment variables. Variables marked with 🔴 *are required* !
+Here you can find a detailed description of available environment variables. Variables marked with 🔴 *are required* !
 
-### 🔴 ADMIN_ID
+### CONNECTOR_LOG_LIFETIME 
+Defines how long the logs will be stored and available. 
 
-Discord-Id of the initial administrator. More can be added later via web interface. To get the id, activate the "Developer Mode" in Discord. More information can you find [here](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-).
+* **Requirements:** Type of string following the pattern: [0-9]+(d)
+* **Default:** `31d`
+* **Example:** `12h`
 
-* **Requirements:** Type of number. 
-* **Example:** `912309123909091230992`
-
-### 🔴 ADMIN_NAME
-
-Username of the initial administrator in form of `username#0000`. More can be added later via web interface.
-
-* **Requirements:** Type of string; Needs to match `/^[\w\s]{2,32}#\d{4}$/`
-* **Example:** `user name#1234`
-
-### 🔴 DISCORD_CHANNEL
+### DISCORD_CHANNEL
 
 Id of the channel in discord, where all notification should be published. To get the id, activate the "Developer Mode" in Discord. More information can you find [here](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-).
 
 * **Requirements:** Type of number
 * **Example:** `912309123909091230992`
 
-### 🔴 DISCORD_TOKEN
+### DISCORD_TOKEN
 
 Token you got from the Discord-Developer-Portal. Instructions, how you can create your own token, can you [here](setup-preparation#-create-a-new-discord-bot)
 
@@ -163,3 +163,31 @@ Defines on which Port your sever listens.
 * **Requirements:** Needs to be a number
 * **Default value:** `4040`
 * **Example:** `8080`
+
+### REGISTRATION_TOKEN_LIFETIME
+Defines how long a registration token will be valid to add a new user as administrator. After the registration token has been used, it becomes invalid independent from the lifetime.
+
+* **Requirements:** Type of string following the pattern: [0-9]+(d)
+* **Default:** `15m`
+* **Example:** `12h`
+
+### RP_NAME
+A human friendly readable title used for WebAuthn.
+
+* **Requirements:** Type of string
+* **Default:** `Notification Service`
+* **Example:** `My fancy notification service`
+
+### 🔴 RP_ID
+Unique identifier for the notification service used for WebAuthn. I have not figured out yet, were it becomes important that this must be unique. Only if you use multiple services? Only if you manage multiple notification services? All under one domain? Idk ...
+
+* **Requirements:** Type of string
+* **Example:** `NotificationServiceID`
+
+### 🔴 RP_ORIGIN
+This must be a [FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) where your application will be running on. It is important that it matches exactly the domain (see example) were you will to the login and registration procedure on.
+
+If you do not know the domain name right now, enter a placeholder value and update it afterwards. Registration and login will fail until RP_ORIGIN will match the domain name
+
+* **Requirements:** Type of string and a valid RFC 3986 URI
+* **Example:** `https://notificationservice.tjarbo.me`

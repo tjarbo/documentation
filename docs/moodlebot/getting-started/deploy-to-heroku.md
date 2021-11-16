@@ -3,7 +3,7 @@ title: 🚀 Deploy to Heroku
 hide_title: false
 hide_table_of_contents: false
 sidebar_label: Deploy to Heroku
-description: Instructions to deploy the moodle notification service to Heroku
+description: Instructions to deploy the notification service for Moodle to Heroku
 keywords:
   - moodle
   - notification
@@ -12,7 +12,7 @@ keywords:
   - heroku
 ---
 
-This article will help you to deploy your moodle notification service to Heroku. Make sure you to follow the instructions step by step.
+This article will help you to deploy your notification service to Heroku. Make sure you to follow the instructions step by step.
 
 :::tip
 Student discount is available with the GitHub education pack. Click [here](https://education.github.com/pack) for more information.

@@ -18,6 +18,7 @@ module.exports = {
       items: [
         'getting-started/preparation',
         'getting-started/deploy-to-heroku',
+        'getting-started/deploy-on-azure',
       ],
     },
     {

@@ -23,9 +23,9 @@ Create a new file on you local filesystem and name it `.env`. In some cases your
 
 Copy and paste code from this [page - section "Only required variables"](../advanced-guides/what-is-inside-env.md#only-required-variables). 
 
-Set a strong secret for [`JWT_SECRET`](../advanced-guides/what-is-inside-env.md#-jwt_secret-%EF%B8%8F). You can use password generators like from [Lastpass](https://www.lastpass.com/de/password-generator) or [pwgen on linux](https://linux.die.net/man/1/pwgen). 
+Set a strong secret for [`JWT_SECRET`](../advanced-guides/what-is-inside-env.md#-jwt_secret-%EF%B8%8F). You can use password generators like from [Lastpass](https://www.lastpass.com/de/password-generator) or [pwgen on linux](https://linux.die.net/man/1/pwgen).
 
-If you choose to run the bot with docker, you can keep the value of [`MONGO_HOST`](../advanced-guides/what-is-inside-env.md#-mongo_host). If not you will find the missing steps in the according _deploy-on_ guides.
+If you choose to run the service with docker, you can keep the value of [`MONGO_HOST`](../advanced-guides/what-is-inside-env.md#-mongo_host). If not you will find the missing steps in the according _deploy-on_ guides.
 
 ### 🏫 Generate your new Moodle-Token
 

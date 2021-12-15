@@ -17,6 +17,7 @@ module.exports = {
       label: 'Getting started',
       items: [
         'getting-started/preparation',
+        'getting-started/deploy-with-docker',
         'getting-started/deploy-to-heroku',
         'getting-started/deploy-on-azure',
       ],

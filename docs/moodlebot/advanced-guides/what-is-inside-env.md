@@ -52,8 +52,9 @@ RP_ORIGIN=
 
 Here you can find a detailed description of available environment variables. Variables marked with 🔴 *are required* !
 
-### CONNECTOR_LOG_LIFETIME 
-Defines how long the logs will be stored and available. 
+### CONNECTOR_LOG_LIFETIME
+
+Defines how long the logs will be stored and available.
 
 * **Requirements:** Type of string following the pattern: [0-9]+(d)
 * **Default:** `31d`
@@ -73,7 +74,7 @@ Token you got from the Discord-Developer-Portal. Instructions, how you can creat
 * **Requirements:** Type of string
 * **Example:** `123asdasd.asdk123m123bk123123.n23kn1n2k3nk123`
 
-### 🔴 JWT_SECRET :warning:
+### 🔴⚠️ JWT_SECRET
 
 Secret that is used to sign your authentication token. **Choose a very strong secret!** You do not have to save it, but **it must be strong!**
 
@@ -105,7 +106,7 @@ Activates logging of mongodb queries. Only needed for development.
 
 ### 🔴 MOODLE_BASE_URL
 
-The URL where the moodle instance is running. You can check and generate this variable on https://fmdb.tjarbo.me.
+The URL where the moodle instance is running. You can check and generate this variable on [https://fmdb.tjarbo.me](https://fmdb.tjarbo.me).
 
 * **Requirements:** Type of string and a valid RFC 3986 URI
 * **Example:** `https://moodle.myuniversity.edu`
@@ -128,7 +129,7 @@ If the remaining time of a submission is less than the specified time, a notific
 
 ### 🔴 MOODLE_TOKEN
 
-Token to log in to the specified Moodle instance. You can maybe get this from your settings or from https://fmdb.tjarbo.me.
+Token to log in to the specified Moodle instance. You can maybe get this from your settings or from [https://fmdb.tjarbo.me](https://fmdb.tjarbo.me).
 
 * **Requirements:** Type of string
 * **Example:** `asdbasd123asdb123123jnj5234nbadjn12332`
@@ -143,7 +144,7 @@ Whether to use short- or fullname of the courses in the discord message.
 
 ### 🔴 MOODLE_USERID
 
-Your user id on the specified Moodle instance. It is part of the URL if you open your Moodle-Profile. https://fmdb.tjarbo.me can help you with this.
+Your user id on the specified Moodle instance. It is part of the URL if you open your Moodle-Profile. [https://fmdb.tjarbo.me](https://fmdb.tjarbo.me) can help you with this.
 
 * **Requirements:** Type of number
 * **Example:** `12345`
@@ -165,6 +166,7 @@ Defines on which Port your sever listens.
 * **Example:** `8080`
 
 ### REGISTRATION_TOKEN_LIFETIME
+
 Defines how long a registration token will be valid to add a new user as administrator. After the registration token has been used, it becomes invalid independent from the lifetime.
 
 * **Requirements:** Type of string following the pattern: [0-9]+(d)
@@ -172,6 +174,7 @@ Defines how long a registration token will be valid to add a new user as adminis
 * **Example:** `12h`
 
 ### RP_NAME
+
 A human friendly readable title used for WebAuthn.
 
 * **Requirements:** Type of string
@@ -179,12 +182,14 @@ A human friendly readable title used for WebAuthn.
 * **Example:** `My fancy notification service`
 
 ### 🔴 RP_ID
-Unique identifier for the notification service used for WebAuthn. I have not figured out yet, were it becomes important that this must be unique. Only if you use multiple services? Only if you manage multiple notification services? All under one domain? Idk ...
 
-* **Requirements:** Type of string
-* **Example:** `NotificationServiceID`
+Unique identifier for the notification service used for WebAuthn. According to our experience, it must be part of `RP_ORIGIN`. The recommendation is to use the domain (no port or protocol compared to `RP_ORIGIN`) where your service is available. If your service is running locally, you can use the value `localhost`.
+
+* **Requirements:** Type of string & Part of `RP_ORIGIN`
+* **Example:** `notification-service.tjarbo.me
 
 ### 🔴 RP_ORIGIN
+
 This must be a [FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) where your application will be running on. It is important that it matches exactly the domain (see example) were you will to the login and registration procedure on.
 
 If you do not know the domain name right now, enter a placeholder value and update it afterwards. Registration and login will fail until RP_ORIGIN will match the domain name

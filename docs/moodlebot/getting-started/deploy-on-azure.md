@@ -37,10 +37,14 @@ To deploy the notification service as App Service make sure that you have ...
 
 1. an account on [Azure](https://portal.azure.com) and an active subscription.
 2. access to [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart)
-3. a `.env` file from [these steps](setup-preparation.md) 
+3. a `.env` file from [these steps](setup-preparation.md)
 4. access to a MongoDB database like from [MongoDB Atlas](../preparation/use-mongodb-atlas.md)
 
 Open the *Azure Cloud Shell* and you are ready
+
+:::info
+Docker has changed its rate limits on unauthenticated pull requests from Docker Hub. This can cause issues while using Docker Hub and Azure App Services. More information and a solution you can find [here](https://azure.github.io/AppService/2020/10/15/Docker-Hub-authenticated-pulls-on-App-Service.html).
+:::
 
 #### 1. Get your wanted location and create new Resource Group
 
@@ -59,7 +63,6 @@ az config set defaults.group=notification-service-rg defaults.location=westus
 
 The second command is used to set the default resource group and location. Please keep in mind that you need to changes these values if you are using the Azure CLI also for other projects.
 
-
 #### 2. Create an App Service
 
 Choose a cool app name for the notification service. The name will be used for the final url `https://[app name].azurewebsites.net`. Use this URL for the `RP_ORIGIN` in your `.env` (e.g `RP_ORIGIN=https://notification-service.azurewebsites.net`). Replace `app-name` in every following command with your chosen name.
@@ -76,7 +79,7 @@ Now it is time to apply you `.env`. If your file is located in your working dire
 az webapp config appsettings set -n app-name --settings @.env
 ```
 
-If not, it becomes a bit more work, as you need to apply each line of `.env` to the following command (KEY=value pairs are separated by a space ` `)
+If not, it becomes a bit more work, as you need to apply each line of `.env` to the following command (KEY=value pairs are separated by a whitespace)
 
 ```azurecli
 az webapp config appsettings set -n app-name --settings MONGO_HOST=mongodb://mongo:27017/fmdb MOODLE_BASE_URL=https://moodle...

@@ -44,3 +44,12 @@ Click here:
 You have successfully deployed your own notification service to Heroku! Within the [logs](https://devcenter.heroku.com/articles/logging#log-retrieval-via-the-web-dashboard) you can find the registration token and url to access the admin panel.
 
 Make sure to convert your maybe free dyno to a hobby dyno with `always-on` enabled.
+
+### 📜 Access logs
+
+Sometimes it is required to open the logs e.g for the initial registration. Follow the steps below to access the logs of your service deployed on Heroku:
+
+1. Open [https://dashboard.heroku.com/apps/](https://dashboard.heroku.com/apps/) and select the Notification Service, you deployed.
+2. In the upper right corner, click on **More** and then on **View logs**
+
+Now you can access all logs of the notification service.

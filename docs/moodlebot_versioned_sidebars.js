@@ -32,9 +32,10 @@ module.exports = {
       type: 'category',
       label: 'Advanced Guides',
       items: [
-        'advanced-guides/configure-via-env',
         'advanced-guides/what-is-inside-env',
+//        'advanced-guides/configure-via-env',
         'advanced-guides/use-mongodb-atlas',
+        'advanced-guides/what-is-passwordless',
       ],
     },
     {

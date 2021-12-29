@@ -1,7 +1,8 @@
 ---
-title: What is inside .env ?
+title: 🔧 What is inside .env ?
 hide_title: true
 hide_table_of_contents: false
+sidebar_label: What is inside .env ?
 description: Description of .env
 keywords:
   - moodle
@@ -43,7 +44,7 @@ MOODLE_USERID=00000
 NODE_ENV=production
 PORT=4040
 REGISTRATION_TOKEN_LIFETIME=15m
-RP_NAME=Notification Service for Moodle
+RP_NAME=NotificationServiceforMoodle
 RP_ID=
 RP_ORIGIN=
 ```
@@ -88,6 +89,14 @@ Defines, how long you will stay logged in at the web interface. `10m` is a good 
 * **Requirements:** Type of string; unit at the end
 * **Default value:** `10m`
 * **Example:** `3h`
+
+### LOGS_TO_FILE
+
+Defines, whether logs are written to filesystem or not. Logs are always written to *std_out*!
+
+* **Requirements:** Boolean (`true` or `false`)
+* **Default value:** `false`
+* **Example:** `true`
 
 ### 🔴 MONGO_HOST
 
@@ -178,8 +187,8 @@ Defines how long a registration token will be valid to add a new user as adminis
 A human friendly readable title used for WebAuthn.
 
 * **Requirements:** Type of string
-* **Default:** `Notification Service`
-* **Example:** `My fancy notification service`
+* **Default:** `NotificationService`
+* **Example:** `NotificationServiceForMoodle`
 
 ### 🔴 RP_ID
 

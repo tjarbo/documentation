@@ -3,7 +3,7 @@ title: 🐳 Deploy with Docker
 hide_title: false
 hide_table_of_contents: false
 sidebar_label: Deploy with Docker
-description: Instructions to deploy the moodle notification service with Docker
+description: Instructions to deploy the Notification Service for Moodle with Docker
 keywords:
   - moodle
   - notification
@@ -47,7 +47,8 @@ services:
     env:
       MONGO_HOST: mongodb://mongo:27017/notification-service
     volumes:
-      # Uncomment to save logs independently from container  
+      # Uncomment to save logs independently from container.
+      # Requires env: 'LOG_TO_FILE: true' 
       # - ./logs:/usr/src/app/log
 ```
 

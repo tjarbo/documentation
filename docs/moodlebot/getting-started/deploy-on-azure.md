@@ -3,7 +3,7 @@ title: 🚀 Deploy on Azure
 hide_title: false
 hide_table_of_contents: false
 sidebar_label: Deploy on Azure
-description: Instructions to deploy the notification service for Moodle on Azure
+description: Instructions to deploy the Notification Service for Moodle on Azure
 keywords:
   - moodle
   - notification
@@ -96,14 +96,15 @@ az webapp config appsettings set -n APP_NAME --settings MONGO_HOST=mongodb://mon
 
 Validate the output that every variable has been set correctly. Additional variables displayed like `DOCKER_REGISTRY_SERVER_URL` just ignore them.
 
-The next step 
+To know, whats going on with your Notification Service, use the following command to active the logging. You will need the logs to get your registration token.
+
 ```azurecli
 az webapp log config --application-logging filesystem --docker-container-logging filesystem --web-server-logging off -n APP_NAME
 ```
 
 ### ✅ Yeah!
 
-Wow, you have successfully deploy your own Notification Service on Azure! Now you are ready to get started. **Open the web interface to trigger the initialization process** and then use the commands from the [next section](#-access-logs) to open the logs and get your registration token!
+Wow, you have successfully deploy your own Notification Service on Azure! Now you are ready to get started. **Open the web interface to trigger the initialization process** with `az webapp browse --name APP_NAME` and then use the commands from the [next section](#-access-logs) to open the logs and get your registration token!
 
 ### 📜 Access logs
 

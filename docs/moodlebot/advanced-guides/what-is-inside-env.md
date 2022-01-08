@@ -33,6 +33,7 @@ DISCORD_CHANNEL=00000...000
 DISCORD_TOKEN=XXXXXX....XXX
 JWT_SECRET=
 JWT_EXPIRESIN=10m
+LOG_TO_FILES=false
 MONGO_HOST=mongodb://mongo:27017/fmdb
 MONGOOSE_DEBUG=false
 MOODLE_BASE_URL=https://moodle.example.com/
@@ -90,9 +91,9 @@ Defines, how long you will stay logged in at the web interface. `10m` is a good 
 * **Default value:** `10m`
 * **Example:** `3h`
 
-### LOGS_TO_FILE
+### LOG_TO_FILE
 
-Defines, whether logs are written to filesystem or not. Logs are always written to *std_out*!
+Defines, whether logs are written to the filesystem. Logs are always written to *std_out*!
 
 * **Requirements:** Boolean (`true` or `false`)
 * **Default value:** `false`
@@ -115,14 +116,14 @@ Activates logging of mongodb queries. Only needed for development.
 
 ### 🔴 MOODLE_BASE_URL
 
-The URL where the moodle instance is running. You can check and generate this variable on [https://fmdb.tjarbo.me](https://fmdb.tjarbo.me).
+The URL where the Moodle instance is running. You can check and generate this variable on [https://fmdb.tjarbo.me](https://fmdb.tjarbo.me).
 
 * **Requirements:** Type of string and a valid RFC 3986 URI
 * **Example:** `https://moodle.myuniversity.edu`
 
 ### MOODLE_FETCH_INTERVAL
 
-Defines how often the FMDB looks for updates on the moodle instance. Interval *in milliseconds*.
+Defines how often the Notification Service looks for updates on the Moodle instance. Interval *in milliseconds*.
 
 * **Requirements:** Type of number
 * **Default value:** `900000`

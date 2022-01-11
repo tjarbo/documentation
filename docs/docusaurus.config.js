@@ -64,10 +64,10 @@ module.exports = {
         sidebarPath: require.resolve('./moodlebot_versioned_sidebars.js'),
         editUrl: 'https://github.com/tjarbo/documentation/tree/master/docs/moodlebot',
         disableVersioning: false,
-        lastVersion: "1.0.0",
+        lastVersion: "current",
         versions: {
             "current": {
-              "label": "Next",
+              "label": "2.0.0",
               "path": "2.0.0"
             },
             "1.0.0": {

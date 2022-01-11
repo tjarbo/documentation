@@ -42,7 +42,7 @@ module.exports = {
       type: 'category',
       label: 'Let\'s contribute',
       items: [
-        'contribution/code',
+        // 'contribution/code',
         'contribution/translations',
       ],
     },

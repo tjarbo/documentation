@@ -11,7 +11,7 @@ keywords:
   - mongoDB Atlas
 ---
 
-This article helps you to setup a database with MongoDB Atlas for your moodle notification service. Before you can start, make sure that you have an account for [MongoDB Atlas](https://www.mongodb.com/cloud/atlas).
+This article helps you to setup a database with MongoDB Atlas for your Notification Service. Before you can start, make sure that you have an account for [MongoDB Atlas](https://www.mongodb.com/cloud/atlas).
 
 :::tip
 Student discount is available with the GitHub education pack. Click [here](https://education.github.com/pack) for more information.

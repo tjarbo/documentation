@@ -14,7 +14,7 @@ keywords:
 Before you can start your own notification service, you need to set up your environment variables which store your Moodle credentials. The following steps will guide you through this process. At the end you should have your `.env` file ready!
 
 :::info
-The Moodle Notification Service uses passwordless authentication! Learn more about this [here](../advanced-guides/what-is-passwordless.md)
+The Notification Service uses a passwordless authentication! Learn more about this [here](../advanced-guides/what-is-passwordless.md)
 :::
 
 ### 📁 Create your file
@@ -46,7 +46,7 @@ This file contains the initial and background configuration of your FMDB. Create
 
 ### ⏭️ What next ?
 
-Now you are ready to deploy your moodle notification service. We have created multiple instructions for different cloud providers and methods.
+Now you are ready to deploy your Notification Service. We have created multiple instructions for different cloud providers and methods.
 
 :::tip
 Many of the chosen providers have a discount for students!

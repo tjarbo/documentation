@@ -1,12 +1,13 @@
 ---
-title: Translations
+title: 💬 Add Translations
+sidebar_label: Translations
 hide_title: false
 hide_table_of_contents: false
 description: Instructions to add or update translations
 keywords:
   - moodle
   - notification
-  - bot
+  - service
   - contribution
   - translation
 ---

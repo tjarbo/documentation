@@ -51,10 +51,10 @@ module.exports = {
       label: 'FAQ',
       href: 'https://github.com/tjarbo/discord-moodle-bot/discussions/categories/q-a',
     },
-    {
-      type: 'link',
-      label: 'Matrix Channel',
-      href: '',
-    }
+    // {
+    //   type: 'link',
+    //   label: 'Matrix Channel',
+    //   href: '',
+    // }
   ],
 };

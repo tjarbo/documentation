@@ -43,10 +43,10 @@ services:
       - mongo
     env_file:
       - .env
-    env:
+    environment:
       MONGO_HOST: mongodb://mongo:27017/notification-service
-    volumes:
-      # Uncomment to save logs independently from container.
+    # Uncomment the following lines to store logs independently from container.
+    # volumes:
       # Requires env: 'LOG_TO_FILE: true' 
       # - ./logs:/usr/src/app/log
 ```

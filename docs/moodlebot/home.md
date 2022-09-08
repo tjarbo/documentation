@@ -17,6 +17,9 @@ keywords:
     <h3>for Moodle™</h3>
 </div>
 
+:::note
+This documentation is still work in progress!
+:::
 
 #### Hey 👋
 

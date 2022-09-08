@@ -21,7 +21,7 @@ MONGO_HOST=mongodb://mongo:27017/fmdb
 MOODLE_BASE_URL=https://moodle.example.com/
 MOODLE_TOKEN=XXXXXXXXXXXXXXXXX
 MOODLE_USERID=00000
-RP_ID=NotificationService
+RP_ID=notificationservice.tjarbo.me
 RP_ORIGIN=https://notificationservice.tjarbo.me
 ```
 

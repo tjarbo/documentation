@@ -27,7 +27,6 @@ Make sure that you ...
 
 ```yml
 version: '3.1'
-
 services:
   mongo:
     image: mongo
@@ -42,7 +41,7 @@ services:
       - 8080:4040
     links:
       - mongo
-    env-file:
+    env_file:
       - .env
     env:
       MONGO_HOST: mongodb://mongo:27017/notification-service
